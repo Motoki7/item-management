@@ -36,7 +36,16 @@
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
-                                    <td>{{ $item->detail }}</td>
+                                    <td>{{ $item->detail }}
+                                    {{-- 編集 --}}
+                                    <a class="button-editing" href="/editing/{{$item->id}}">編集</a>
+                                    {{-- 削除 --}}
+                                    <form action="{{ url('item/'.$item->id) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button class="button-delete" type="submit" id="delete-item-{{ $item->id }}" class="btn btn-danger">削除</button>
+                                    </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
