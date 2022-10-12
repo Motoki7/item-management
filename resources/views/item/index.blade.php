@@ -36,7 +36,7 @@
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
-                                    <td class="index-detail"><a href="">{{ $item->detail }}</a>
+                                    <td class="index-detail"><a href="/detail/{{$item->id}}">{{ $item->detail }}</a>
                                     {{-- 編集 --}}
                                     <a class="button-editing" href="/editing/{{$item->id}}">編集</a>
                                     {{-- 削除 --}}

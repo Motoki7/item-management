@@ -3,37 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Item;
 
 class EditingController extends Controller
 {
-    /**
- * Show the form for editing the specified resource.
- *
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
-public function edit($id)
-{
-    $item = Item::find($id);
+    //
+        public function edit(Request $request)
+    {
+        $item = Item::find($request->id);
+        return view('item.editing', compact('item'));
+    }
 
-    return view('item.editing', [
-        'product' => $product
-    ]);
-}
-
-/**
- * Update the specified resource in storage.
- *
- * @param  \Illuminate\Http\Request  $request
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
-public function update(ProductRequest $request, $id)
-{
-    $product = Product::find($id);
-    $product->fill($request->all())->save();
-
-    // 一覧へ戻り完了メッセージを表示
-    return redirect()->route('product.index')->with('message', '編集しました');
-}
+    public function update(Request $request)
+    {
+        $item = Item::find($request->id);
+        $item->name = $request->input('name');
+        $item->type = $request->input('type');
+        $item->detail = $request->input('detail');
+        $item->save();
+        return redirect('/items');
+    }
 }

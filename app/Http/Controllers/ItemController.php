@@ -58,12 +58,12 @@ class ItemController extends Controller
         return view('item.add');
     }
 
-        //アイテム削除
-        public function destroy(Request $request, item $id)
-        {
-            $id->delete();
-            return redirect('/items');
-        }
+    //アイテム削除
+    public function destroy(Request $request, item $id)
+    {
+        $id->delete();
+        return redirect('/items');
+    }
 
     /**
      * 編集画面
@@ -72,5 +72,14 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         return view('item.editing', compact('item'));
+    }
+
+        /**
+     * 詳細画面
+     */
+    public function detail($id)
+    {
+        $item = Item::find($id);
+        return view('item.detail', compact('item'));
     }
 }

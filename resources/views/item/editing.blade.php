@@ -3,49 +3,40 @@
 @section('title', '商品編集')
 
 @section('content_header')
-    <h1>商品編集</h1>
+<h1>商品編集画面</h1>
 @stop
 
 @section('content')
-    @if ($errors->any())
-        <div class="alert alert-warning alert-dismissible">
-            {{-- エラーの表示 --}}
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+@if ($errors->any())
+<div class="alert alert-warning alert-dismissible">
+    {{-- エラーの表示 --}}
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 
-    {{-- 編集画面 --}}
-    <div class="card">
-        <form action="{{ route('product.update', $product->id) }}" method="post">
-            @csrf @method('PUT')
-            <div class="card-body">
-                {{-- 商品名入力 --}}
-                <div class="form-group">
-                    <label for="name">商品名</label>
-                    <input type="text" class="form-control" id="name" name="name"
-                        value="{{ old('name', $product->name) }}" placeholder="商品名" />
-                </div>
-                {{-- 価格入力 --}}
-                <div class="form-group">
-                    <label for="price">価格</label>
-                    <input type="text" class="form-control" id="price" name="price"
-                        value="{{ old('price', $product->price) }}" placeholder="価格" />
-                </div>
+{{-- 編集画面 --}}
+<div class="editing">
+    <!--form action内のものをPOSTで送信する-->
+    <form action="/item/{{ $item->id }}" method="POST">
+        <h6 class="text-top">名 前</h6>
+        @csrf
+        @method('PUT')
+        <input type="text" name="name" value="{{ $item->name }}">
+        <h6 class="text-second">種 別</h6>
+        <input type="name" name="type" value="{{ $item->type }}">
+        <h6 class="text-serd">詳 細</h6>
+        <textarea name="detail" cols="50" rows="10" value="{{ $item->detail }}">{{ $item->detail }}</textarea>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-list">
+                <button type="submit" class="send">送信</button>
             </div>
-            <div class="card-footer">
-                <div class="row">
-                    <a class="btn btn-default" href="{{ route('product.index') }}" role="button">戻る</a>
-                    <div class="ml-auto">
-                        <button type="submit" class="btn btn-primary">編集</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 @stop
 
 @section('css')
