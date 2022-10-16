@@ -28,8 +28,9 @@
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>詳細</th>
-                                <th>価格</th>
-                                
+                                <th>販売価格</th>
+                                <th>仕入価格</th>
+                                <th>利益</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,6 +50,8 @@
                                     </form>
                                     </td>
                                     <td>{{ $item->price }}円</td>
+                                    <td>{{ $item->cost_price }}円</td>
+                                    <td>{{ $item->gains }}円</td>
                                 </tr>
                             @endforeach
                         </tbody>

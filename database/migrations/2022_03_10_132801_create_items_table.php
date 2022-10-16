@@ -21,6 +21,8 @@ class CreateItemsTable extends Migration
             $table->smallInteger('type')->nullable();
             $table->string('detail', 500)->nullable();
             $table->integer('price')->default('0');
+            $table->integer('cost_price')->default('0');
+            $table->integer('gains')->default('0');
             $table->timestamps();
         });
     }
