@@ -232,7 +232,7 @@ return [
         ],
 
         // AdminLTEデフォルト
-        /*
+
         // Navbar items:
         [
             'type'         => 'navbar-search',
@@ -243,15 +243,16 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-        */
+
 
         // AdminLTEデフォルト
-        /*
+
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        /*
         [
             'text' => 'blog',
             'url'  => 'admin/blog',

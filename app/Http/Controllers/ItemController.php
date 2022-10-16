@@ -50,6 +50,7 @@ class ItemController extends Controller
                 'name' => $request->name,
                 'type' => $request->type,
                 'detail' => $request->detail,
+                'price' => $request->price,
             ]);
 
             return redirect('/items');
