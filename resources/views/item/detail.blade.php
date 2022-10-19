@@ -25,6 +25,9 @@
             <li>ID: {{ $item->id }}</li>
             <li>名前: {{ $item->name }}</li>
             <li>詳細: {{ $item->detail }}</li>
+            <li>販売価格: {{ $item->price }}円</li>
+            <li>仕入価格: {{ $item->cost_price }}円</li>
+            <li>利益: {{ $item->gains }}円</li>
             <li>作成時間: {{ $item->created_at }}</li>
         </ul>
 @stop

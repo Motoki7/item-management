@@ -52,7 +52,7 @@ class ItemController extends Controller
                 'detail' => $request->detail,
                 'price' => $request->price,
                 'cost_price' => $request->cost_price,
-                'gains' => $request->gains,
+                'gains' => $request->price - $request->cost_price,
             ]);
 
             return redirect('/items');

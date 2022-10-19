@@ -40,18 +40,18 @@
 
                         <div class="form-group">
                             <label for="detail">価格</label>
-                            <input type="text" class="form-control" id="price" name="price" placeholder="価格記入">
+                            <input type="number" class="form-control" id="price" name="price" placeholder="価格記入">
                         </div>
 
                         <div class="form-group">
                             <label for="detail">仕入価格</label>
-                            <input type="text" class="form-control" id="cost_price" name="cost_price" placeholder="仕入記入">
+                            <input type="number" class="form-control" id="cost_price" name="cost_price" placeholder="仕入記入">
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="detail">利益</label>
                             <input type="text" class="form-control" id="gains" name="gains" placeholder="利益">
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="card-footer">

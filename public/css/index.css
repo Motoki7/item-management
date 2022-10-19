@@ -3,8 +3,12 @@
     justify-content: space-between;
     align-items: center;
 }
+.index-detail a {
+    color: black;
+}
+
 a.button-editing {
-    color: rgb(45, 71, 199);
+    color: rgb(45, 99, 199);
     margin: 0 0 0 auto;
     padding-right: 20px;
 }
