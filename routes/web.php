@@ -30,3 +30,4 @@ Route::delete('item/{id}', [\App\Http\Controllers\ItemController::class, 'destro
 Route::get('editing/{id}', [App\Http\Controllers\EditingController::class, 'edit']);
 Route::put('item/{id}', [App\Http\Controllers\EditingController::class, 'update']);
 Route::get('detail/{id}', [App\Http\Controllers\ItemController::class, 'detail']);
+Route::get('earnings', [App\Http\Controllers\ItemController::class, 'earnings']);

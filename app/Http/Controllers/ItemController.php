@@ -85,4 +85,12 @@ class ItemController extends Controller
         $item = Item::find($id);
         return view('item.detail', compact('item'));
     }
+
+            /**
+     * 売上画面
+     */
+    public function earnings()
+    {
+        return view('item.earnings');
+    }
 }
