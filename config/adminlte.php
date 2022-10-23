@@ -410,7 +410,7 @@ return [
         ],
         'Chartjs' => [
             'active' => false,
-            'files' => [
+            'files' => [   
                 [
                     'type' => 'js',
                     'asset' => false,
