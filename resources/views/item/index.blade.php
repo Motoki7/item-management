@@ -28,6 +28,7 @@
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>詳細</th>
+                                <th>在庫</th>
                                 <th>販売価格</th>
                                 <th>仕入価格</th>
                                 <th>利益</th>
@@ -49,6 +50,7 @@
                                         <button class="button-delete" type="submit" id="delete-item-{{ $item->id }}" class="btn btn-danger">削除</button>
                                     </form>
                                     </td>
+                                    <td>{{ $item->quantity }}個</td>
                                     <td>{{ $item->price }}円</td>
                                     <td>{{ $item->cost_price }}円</td>
                                     <td>{{ $item->gains }}円</td>

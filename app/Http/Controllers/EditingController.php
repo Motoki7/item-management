@@ -20,6 +20,7 @@ class EditingController extends Controller
         $item->name = $request->input('name');
         $item->type = $request->input('type');
         $item->detail = $request->input('detail');
+        $item->quantity = $request->input('quantity');
         $item->price = $request->input('price');
         $item->cost_price = $request->input('cost_price');
         $item->gains = $request->input('price') - $request->input('cost_price');

@@ -39,6 +39,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="quantity">在庫数</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="個数">
+                        </div>
+
+                        <div class="form-group">
                             <label for="detail">価格</label>
                             <input type="number" class="form-control" id="price" name="price" placeholder="価格記入">
                         </div>

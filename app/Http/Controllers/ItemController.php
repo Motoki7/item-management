@@ -50,6 +50,7 @@ class ItemController extends Controller
                 'name' => $request->name,
                 'type' => $request->type,
                 'detail' => $request->detail,
+                'quantity' => $request->quantity,
                 'price' => $request->price,
                 'cost_price' => $request->cost_price,
                 'gains' => $request->price - $request->cost_price,

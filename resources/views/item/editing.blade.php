@@ -30,6 +30,8 @@
         <input type="name" name="type" value="{{ $item->type }}">
         <h6 class="text-serd">詳 細</h6>
         <textarea name="detail" cols="50" rows="10" value="{{ $item->detail }}">{{ $item->detail }}</textarea>
+        <h6 class="text-serd">在庫数（個）</h6>
+        <input type="number" name="quantity" value="{{ $item->quantity }}">
         <h6 class="text-serd">販売価格（円）</h6>
         <input type="number" name="price" value="{{ $item->price }}">
         <h6 class="text-serd">仕入価格（円）</h6>
