@@ -1,13 +1,15 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'ホーム画面')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <!-- <h1>Dashboard</h1> -->
+    <h1>Techis_商品管理システム</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <!-- <p>Welcome to this beautiful admin panel.</p> -->
+    <p>在庫管理・売上管理ができるシステムです。</p>
 @stop
 
 @section('css')

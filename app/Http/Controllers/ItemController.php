@@ -50,11 +50,48 @@ class ItemController extends Controller
                 'name' => $request->name,
                 'type' => $request->type,
                 'detail' => $request->detail,
+                'quantity' => $request->quantity,
+                'price' => $request->price,
+                'cost_price' => $request->cost_price,
+                'gains' => $request->price - $request->cost_price,
             ]);
 
             return redirect('/items');
         }
 
         return view('item.add');
+    }
+
+    //アイテム削除
+    public function destroy(Request $request, item $id)
+    {
+        $id->delete();
+        return redirect('/items');
+    }
+
+    /**
+     * 編集画面
+     */
+    public function editing($id)
+    {
+        $item = Item::find($id);
+        return view('item.editing', compact('item'));
+    }
+
+        /**
+     * 詳細画面
+     */
+    public function detail($id)
+    {
+        $item = Item::find($id);
+        return view('item.detail', compact('item'));
+    }
+
+            /**
+     * 売上画面
+     */
+    public function earnings()
+    {
+        return view('item.earnings');
     }
 }

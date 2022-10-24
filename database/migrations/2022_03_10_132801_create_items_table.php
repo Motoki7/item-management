@@ -20,6 +20,10 @@ class CreateItemsTable extends Migration
             $table->string('status', 100)->default('active');
             $table->smallInteger('type')->nullable();
             $table->string('detail', 500)->nullable();
+            $table->integer('quantity')->default('0');
+            $table->integer('price')->default('0');
+            $table->integer('cost_price')->default('0');
+            $table->integer('gains')->default('0');
             $table->timestamps();
         });
     }

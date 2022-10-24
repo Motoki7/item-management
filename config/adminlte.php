@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>商品管理</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/shoes icon.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -228,11 +228,16 @@ return [
         [
             'text' => '商品一覧',
             'url'  => 'items',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fa fa-home',
+        ],
+        [
+            'text' => '売上一覧',
+            'url'  => 'earnings',
+            'icon' => 'fas fa-fw fa-file',
         ],
 
         // AdminLTEデフォルト
-        /*
+
         // Navbar items:
         [
             'type'         => 'navbar-search',
@@ -243,15 +248,16 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-        */
+
 
         // AdminLTEデフォルト
-        /*
+
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        /*
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -404,7 +410,7 @@ return [
         ],
         'Chartjs' => [
             'active' => false,
-            'files' => [
+            'files' => [   
                 [
                     'type' => 'js',
                     'asset' => false,

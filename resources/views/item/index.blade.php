@@ -28,6 +28,10 @@
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>詳細</th>
+                                <th>在庫</th>
+                                <th>販売価格</th>
+                                <th>仕入価格</th>
+                                <th>利益</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,7 +40,20 @@
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
-                                    <td>{{ $item->detail }}</td>
+                                    <td class="index-detail"><a href="/detail/{{$item->id}}">{{ $item->detail }}</a>
+                                    {{-- 編集 --}}
+                                    <a class="button-editing" href="/editing/{{$item->id}}">編集</a>
+                                    {{-- 削除 --}}
+                                    <form action="{{ url('item/'.$item->id) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button class="button-delete" type="submit" id="delete-item-{{ $item->id }}" class="btn btn-danger">削除</button>
+                                    </form>
+                                    </td>
+                                    <td>{{ $item->quantity }}個</td>
+                                    <td>{{ $item->price }}円</td>
+                                    <td>{{ $item->cost_price }}円</td>
+                                    <td>{{ $item->gains }}円</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -48,6 +65,7 @@
 @stop
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @stop
 
 @section('js')
